@@ -99,10 +99,11 @@ gulp.task('depcheck', function() {
 const babelHelperWhitelist = [
   'typeof',  // Symbol support, for IE11
   // 'jsx', // we don't support JSX
-  // 'asyncIterator', // async-iterators are not in ES2015
-  // 'asyncGenerator', // async-iterators are not in ES2015
-  // 'asyncGeneratorDelegate', // async-iterators are not in ES2015
-  // 'asyncToGenerator', // async functions are not in ES2015
+  'asyncIterator', // async-iterators are not in ES2015
+  'asyncGenerator', // async-iterators are not in ES2015
+  'asyncGeneratorDelegate', // async-iterators are not in ES2015
+  'asyncToGenerator', // async functions are not in ES2015
+  'asyncFunctions', // async functions are not in ES2015 cek
   'classCallCheck',
   'createClass',
   'defineEnumerableProperties',
@@ -123,6 +124,7 @@ const babelHelperWhitelist = [
   'set',  // difficult to tell if needed
   'slicedToArray',
   // 'slicedToArrayLoose',
+  'syntaxAsyncFunctions', // cek
   'taggedTemplateLiteral',
   // 'taggedTemplateLiteralLoose',
   'temporalRef',  // not needed in loose?
